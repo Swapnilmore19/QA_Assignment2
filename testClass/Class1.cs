@@ -183,6 +183,119 @@ namespace testClass
             Assert.AreEqual("The triangle is valid and is a SCALENE", output);
         }
 
+        [Test]
+        public void AnalyzeTriangle_Input0and7and2_OutputZeroLengthTriangle()
+        {
+            //arrange
+
+            int sideA, sideB, sideC;
+            sideA = 0;
+            sideB = 7;
+            sideC = 2;
+
+            //act
+
+            string output = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            //assert
+
+            Assert.AreEqual("At least one side of your triangle has a zero length and is thus invalid", output);
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input0and0and2_OutputZeroLengthTriangle()
+        {
+            //arrange
+
+            int sideA, sideB, sideC;
+            sideA = 0;
+            sideB = 0;
+            sideC = 2;
+
+            //act
+
+            string output = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            //assert
+
+            Assert.AreEqual("At least one side of your triangle has a zero length and is thus invalid", output);
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input0and0and0_OutputZeroLengthTriangle()
+        {
+            //arrange
+
+            int sideA, sideB, sideC;
+            sideA = 0;
+            sideB = 0;
+            sideC = 0;
+
+            //act
+
+            string output = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            //assert
+
+            Assert.AreEqual("At least one side of your triangle has a zero length and is thus invalid", output);
+        }
+
+        [Test]
+        public void AnalyzeTriangle_InputMinus1and2and3_OutputInvalidTriangle()
+        {
+            //arrange
+
+            int sideA, sideB, sideC;
+            sideA = -1;
+            sideB = 2;
+            sideC = 3;
+
+            //act
+
+            string output = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            //assert
+
+            Assert.AreEqual("A triangle cannot be formed with those numbers", output);
+        }
+
+        [Test]
+        public void AnalyzeTriangle_InputMinus1andMinus2and3_OutputInvalidTriangle()
+        {
+            //arrange
+
+            int sideA, sideB, sideC;
+            sideA = -1;
+            sideB = -2;
+            sideC = 3;
+
+            //act
+
+            string output = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            //assert
+
+            Assert.AreEqual("A triangle cannot be formed with those numbers", output);
+        }
+
+        [Test]
+        public void AnalyzeTriangle_InputMinus1andMinus2andMinus3_OutputInvalidTriangle()
+        {
+            //arrange
+
+            int sideA, sideB, sideC;
+            sideA = -1;
+            sideB = -2;
+            sideC = -3;
+
+            //act
+
+            string output = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            //assert
+
+            Assert.AreEqual("A triangle cannot be formed with those numbers", output);
+        }
 
     }
 }
