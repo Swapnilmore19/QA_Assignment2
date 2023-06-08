@@ -29,5 +29,65 @@ namespace testClass
 
             Assert.AreEqual("The triangle is valid and is an EQUILATERAL", output);
         }
+
+
+        [Test]
+        public void AnalyzeTriangle_Input10and10and9_OutputIsocelesTriangle()
+        {
+            //arrange
+
+            int sideA, sideB, sideC;
+            sideA = 10;
+            sideB = 10;
+            sideC = 9;
+
+            //act
+
+            string output = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            //assert
+
+            Assert.AreEqual("The triangle is valid and is an ISOSCELES", output);
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input8and8and9_OutputIsocelesTriangle()
+        {
+            //arrange
+
+            int sideA, sideB, sideC;
+            sideA = 8;
+            sideB = 8;
+            sideC = 9;
+
+            //act
+
+            string output = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            //assert
+
+            Assert.AreEqual("The triangle is valid and is an ISOSCELES", output);
+        }
+
+        [Test]
+        public void AnalyzeTriangle_Input7and7and5_OutputIsocelesTriangle()
+        {
+            //arrange
+
+            int sideA, sideB, sideC;
+            sideA = 8;
+            sideB = 8;
+            sideC = 9;
+
+            //act
+
+            string output = Triangle.AnalyzeTriangle(sideA, sideB, sideC);
+
+            //assert
+
+            Assert.AreEqual("The triangle is valid and is an ISOSCELES", output);
+        }
+
+
     }
 }
